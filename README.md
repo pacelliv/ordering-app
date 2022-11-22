@@ -12,7 +12,7 @@ The challenge consisted in:
 
 -   Rendering the menu to the DOM
 -   Give the user the ability to order items
--   Rendering the order items
+-   Rendering the ordered items
 -   Calculating the price of the order
 -   Creating a modal requesting clients payment data
 
