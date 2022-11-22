@@ -132,7 +132,9 @@ function handlePayClick(event) {
     modal.classList.add("hidden")
     document.getElementById("order").innerHTML = `
             <div class="order-confirmed">
-                <h1 class="order-confirmed-text">Pacelli, your order is on its way!</h1>
+                <h1 class="order-confirmed-text">${
+                    document.getElementById("name").value
+                }, your order is on its way!</h1>
                 <div id="rating" class="rating">
                     <div class="star-widget" id="star-widget">
                         <input type="radio" name="rate" id="rate-5" />
