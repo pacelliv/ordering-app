@@ -22,7 +22,7 @@ import{v4 as g}from"https://jspm.dev/uuid";(function(){const r=document.createEl
             </div>
             <button class="order-btn" id="order-btn">Complete order</button>
         </div>
-    `,document.getElementById("total-price").textContent=`$${a}`,d.length>0&&(d.forEach(o=>{console.log(o);const{name:u,price:f,uuid:p}=o;r+=`
+    `,document.getElementById("total-price").textContent=`$${a}`,d.length>0&&(d.forEach(o=>{const{name:u,price:f,uuid:p}=o;r+=`
             <div class="items">
                 <h3 class="item-name">${u}</h3>
                 <button class="remove-btn" data-remove="${p}">remove</button>
