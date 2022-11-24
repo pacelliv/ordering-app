@@ -47,11 +47,12 @@ function handleAddClick(id) {
         return item.id == id
     })[0]
 
-    // Adds an uuid to a selected item
-    orderedItems.push({
-        ...targetItemObj,
-        uuid: uuidv4(),
-    })
+    if (!orderedItems.includes(targetItemObj.id === 0)) {
+        orderedItems.push({
+            ...targetItemObj,
+            uuid: uuidv4(), // Adds an uuid to a selected item
+        })
+    }
 
     getOrderHtml(orderedItems)
 }
@@ -92,6 +93,14 @@ function getOrderHtml(items) {
     let orderHtml = ""
     let totalPrice = 0
 
+    // Removing the duplicates from items array by id
+    const newItemsArray = items.map((item) => [item.id, item])
+    const newMap = new Map(newItemsArray)
+    const iterator = newMap.values()
+    const uniqueItems = [...iterator]
+    // The four lines from above can be reduce into:
+    // const uniqueItems = [...new Map(items.map((item) => [item.id, item]).values())]
+
     if (orderedItems.length === 0) {
         document.getElementById("order-feed").classList.add("hidden")
     }
@@ -114,8 +123,9 @@ function getOrderHtml(items) {
 
     document.getElementById("total-price").textContent = `$${totalPrice}`
 
-    if (orderedItems.length > 0) {
-        items.forEach((item) => {
+    if (uniqueItems.length > 0) {
+        uniqueItems.forEach((item) => {
+            console.log(item)
             const { name, price, uuid } = item
             orderHtml += `
             <div class="items">
