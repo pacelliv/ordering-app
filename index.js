@@ -94,10 +94,10 @@ function getOrderHtml(items) {
     let totalPrice = 0
 
     // Removing the duplicates from items array by id
-    const newItemsArray = items.map((item) => [item.id, item])
-    const newMap = new Map(newItemsArray)
-    const iterator = newMap.values()
-    const uniqueItems = [...iterator]
+    const newItemsArray = items.map((item) => [item.id, item]) // returns an array of arrays. Each nested array contains the id and the item
+    const newMap = new Map(newItemsArray) // creates a Map in which each id become a unique key, since keys are unique any duplicate array will be removed
+    const iterator = newMap.values() // iterates through the Map using the keys and fetch the values
+    const uniqueItems = [...iterator] // spread the values into as elements in a new array
     // The four lines from above can be reduce into:
     // const uniqueItems = [...new Map(items.map((item) => [item.id, item]).values())]
 
@@ -125,7 +125,6 @@ function getOrderHtml(items) {
 
     if (uniqueItems.length > 0) {
         uniqueItems.forEach((item) => {
-            console.log(item)
             const { name, price, uuid } = item
             orderHtml += `
             <div class="items">
