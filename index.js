@@ -17,6 +17,9 @@ document.addEventListener("click", (e) => {
     if (e.target.dataset.add) {
         document.getElementById("order-feed").classList.remove("hidden")
         handleAddClick(e.target.dataset.add)
+    } else if (e.target.dataset.cross) {
+        document.getElementById("order-feed").classList.remove("hidden")
+        handleAddClick(e.target.dataset.cross)
     } else if (e.target.id === "order-btn") {
         modal.classList.remove("hidden")
     } else if (e.target.id === "pay-btn") {
@@ -75,13 +78,15 @@ function getFeedHtml() {
                     <p clas="item-price">$${price}</p>
                 </div>
                 <button class="add-btn" data-add="${id}">
-                <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus" data-cross="${id}"></i>
                 </button>
           </div>
       `
     })
     return menuHtml
 }
+
+//                 // <i class="fa-solid fa-plus"></i>
 
 /* getOrderHtml uses the item returned by handleAddClick or handleRemoveClick 
 to create and HTML string of ordered items and renders them to the DOM */
