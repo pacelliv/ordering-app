@@ -31,7 +31,7 @@ document.addEventListener("click", (e) => {
     }
 })
 
-/* handleRatingClick renders a greeting message to the DOM after 
+/* handleRatingClick renders a greeting message to the DOM 
 after the user submits a rating */
 function handleRatingClick(event) {
     event.preventDefault()
