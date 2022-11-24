@@ -31,7 +31,8 @@ This project was built using [Vite](https://vitejs.dev/).
 ### Feature to be included:
 
 -   ~~Star rating element for the client~~
--   Discount to the client
+-   ~~Remove duplicates from the DOM~~
+-   Discount for the client
 
 ## Quick start:
 
@@ -74,6 +75,8 @@ $ yarn build # npm run build
 -   [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 -   [Document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 -   [EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+-   [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+-   [Remove Duplicates from an Array](https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/)
 
 ## Thank you 🎉 🎉
 
