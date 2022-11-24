@@ -14,11 +14,11 @@ The challenge consisted in:
 -   Give the user the ability to order items
 -   Rendering the ordered items
 -   Calculating the price of the order
--   Creating a modal requesting clients payment data
+-   Creating a modal requesting payment data
 
 ## Elaboration
 
-This project was built using [Vite](https://vitejs.dev/)
+This project was built using [Vite](https://vitejs.dev/).
 
 ### This project was built using:
 
