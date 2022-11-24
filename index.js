@@ -96,7 +96,7 @@ function getOrderHtml(items) {
     // Removing the duplicates from items array by id
     const newItemsArray = items.map((item) => [item.id, item]) // returns an array of arrays. Each nested array contains the id and the item
     const newMap = new Map(newItemsArray) // creates a Map in which each id become a unique key, since keys are unique any duplicate array will be removed
-    const iterator = newMap.values() // iterates through the Map using the keys and fetch the values
+    const iterator = newMap.values() // returns a new Iterator object that contains the values of each element in the Map object in order of insertion
     const uniqueItems = [...iterator] // spread the values into as elements in a new array
     // The four lines from above can be reduce into:
     // const uniqueItems = [...new Map(items.map((item) => [item.id, item]).values())]
