@@ -86,8 +86,6 @@ function getFeedHtml() {
     return menuHtml
 }
 
-//                 // <i class="fa-solid fa-plus"></i>
-
 /* getOrderHtml uses the item returned by handleAddClick or handleRemoveClick 
 to create and HTML string of ordered items and renders them to the DOM */
 function getOrderHtml(items) {
