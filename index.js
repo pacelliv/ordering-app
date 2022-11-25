@@ -47,12 +47,10 @@ function handleAddClick(id) {
         return item.id == id
     })[0]
 
-    if (!orderedItems.includes(targetItemObj.id === 0)) {
-        orderedItems.push({
-            ...targetItemObj,
-            uuid: uuidv4(), // Adds an uuid to a selected item
-        })
-    }
+    orderedItems.push({
+        ...targetItemObj,
+        uuid: uuidv4(), // Adds an uuid to a selected item
+    })
 
     getOrderHtml(orderedItems)
 }
@@ -64,34 +62,36 @@ function handleRemoveClick(id) {
     getOrderHtml(orderedItems)
 }
 
-/* getFeedHtml creates a HTML string of the avaliable items using menuArray */
-function getFeedHtml() {
-    let menuHtml = ""
-
-    menuArray.forEach((item) => {
-        const { foodPic, name, ingredients, price, id } = item
-        menuHtml += `
-          <div class="item">
-                <img src="${foodPic}" class="item-image" />
-                <div class="item-description">
-                    <h3 class="item-name">${name}</h3>
-                    <p class="item-ingredients">${ingredients.join(", ")}</p>
-                    <p clas="item-price">$${price}</p>
-                </div>
-                <button class="add-btn" data-add="${id}">
-                    <i class="fa-solid fa-plus" data-cross="${id}"></i>
-                </button>
-          </div>
-      `
-    })
-    return menuHtml
-}
-
 /* getOrderHtml uses the item returned by handleAddClick or handleRemoveClick 
 to create and HTML string of ordered items and renders them to the DOM */
 function getOrderHtml(items) {
     let orderHtml = ""
     let totalPrice = 0
+    let countPizza = 0
+    let countHamburger = 0
+    let countBeer = 0
+
+    const itemsCount = items.map((item) => item.id)
+
+    itemsCount.forEach((element) => {
+        if (element === 0) {
+            countPizza += 1
+        }
+    })
+
+    itemsCount.forEach((element) => {
+        if (element === 1) {
+            countHamburger += 1
+        }
+    })
+
+    itemsCount.forEach((element) => {
+        if (element === 2) {
+            countBeer += 1
+        }
+    })
+
+    //console.log(countPizza, countHamburger, countBeer)
 
     // Removing the duplicates from items array by id
     const newItemsArray = items.map((item) => [item.id, item]) // returns an array of arrays. Each nested array contains the id and the item
@@ -125,12 +125,14 @@ function getOrderHtml(items) {
 
     if (uniqueItems.length > 0) {
         uniqueItems.forEach((item) => {
-            const { name, price, uuid } = item
+            const { name, price, uuid, id } = item
             orderHtml += `
             <div class="items">
                 <h3 class="item-name">${name}</h3>
                 <button class="remove-btn" data-remove="${uuid}">remove</button>
-                <p class="item-price right">$${price}</p>
+                <p class="item-price right"><span>${
+                    id === 0 ? countPizza : id === 1 ? countHamburger : countBeer
+                }x</span> $${price}</p>
             </div>
             `
         })
@@ -167,6 +169,29 @@ function handlePayClick(event) {
             </div>
         `
     orderedItems = []
+}
+
+/* getFeedHtml creates a HTML string of the avaliable items using menuArray */
+function getFeedHtml() {
+    let menuHtml = ""
+
+    menuArray.forEach((item) => {
+        const { foodPic, name, ingredients, price, id } = item
+        menuHtml += `
+          <div class="item">
+                <img src="${foodPic}" class="item-image" />
+                <div class="item-description">
+                    <h3 class="item-name">${name}</h3>
+                    <p class="item-ingredients">${ingredients.join(", ")}</p>
+                    <p clas="item-price">$${price}</p>
+                </div>
+                <button class="add-btn" data-add="${id}">
+                    <i class="fa-solid fa-plus" data-cross="${id}"></i>
+                </button>
+          </div>
+      `
+    })
+    return menuHtml
 }
 
 /* This function renders to the DOM the HTML string returned by getFeedHtml() */
