@@ -2,9 +2,10 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<div align="center">
-    <img src="./public/images/screenshot-ordering-app.png" />
-</div>
+<p float="left">
+  <img src="./public/images/screenshot-feed.png" width="100" />
+  <img src="./public/images/screenshot-modal.png" width="100" /> 
+</p>
 
 ## Overview
 
@@ -33,6 +34,8 @@ This project was built using [Vite](https://vitejs.dev/).
 -   ~~Star rating element for the client~~
 -   ~~Remove duplicates from the DOM~~
 -   Discount for the client
+-   Banner with animated slideshow
+-   Different color palette
 
 ## Quick start:
 
