@@ -2,7 +2,7 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<p align="middle" width="100%">
+<p float="left" >
   <img src="/public/images/screenshot-feed.png" width="45%" />
   <img src="/public/images/screenshot-modal.png" width="45%" /> 
 </p>
