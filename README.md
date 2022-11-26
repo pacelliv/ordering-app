@@ -29,7 +29,7 @@ This project was built using [Vite](https://vitejs.dev/).
 -   Vanilla JavaScript
 -   nanoid
 
-### Feature to be included:
+### Features to be included:
 
 -   ~~Star rating element for the client~~
 -   ~~Remove duplicates from the DOM~~
