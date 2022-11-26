@@ -2,9 +2,13 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<div align="middle" >
-  <img src="/public/images/screenshot-feed.png" width="45%" />
-  <img src="/public/images/screenshot-modal.png" width="45%" /> 
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src=".public/images/screenshot-feed.png" width="200"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src=".public/images/screenshot-modal.png" width="300"/>
+     </div>
 </div>
 
 ## Overview
