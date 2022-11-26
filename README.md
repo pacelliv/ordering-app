@@ -3,8 +3,8 @@
 ## This is a solution to the ordering app solo-project from Scrimba
 
 <div style="display:flex">
-    <img src="public/images/pizza.png" width="45%" />
-    <img src="public/images/pizza.png" width="45%" />
+    <img src="public/images/feed.png" width="45%" />
+    <img src="public/images/fedd.png" width="45%" />
 </div>
 
 ## Overview
