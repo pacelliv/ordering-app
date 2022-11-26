@@ -2,10 +2,10 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<div float="left" width="500">
-  <img src="./public/images/screenshot-feed.png" />
-  <img src="./public/images/screenshot-modal.png" /> 
-</div>
+<p align="middle" >
+  <img src="./public/images/screenshot-feed.png" width="200"/>
+  <img src="./public/images/screenshot-modal.png" width="200" /> 
+</p>
 
 ## Overview
 
