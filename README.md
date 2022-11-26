@@ -2,10 +2,9 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<p align="middle" >
-  <img src="images/screenshot-feed.png" width="45%" />
-  <img src="images/screenshot-modal.png" width="45%" /> 
-</p>
+|             Solarized dark              |             Solarized Ocean             |
+| :-------------------------------------: | :-------------------------------------: |
+| ![](.public/images/screenshot-feed.png) | ![](.public/images/screenshot-feed.png) |
 
 ## Overview
 
