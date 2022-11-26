@@ -4,7 +4,7 @@
 
 <div style="display:flex" align="middle">
     <img src="public/images/feed.png" width="45%" />
-    <img src="public/images/fedd.png" width="45%" />
+    <img src="public/images/modal.png" width="45%" />
 </div>
 
 ## Overview
