@@ -7,7 +7,7 @@
   <img src=".../.../screenshot-modal.png" width="45%" /> 
 </p>
 <div>
-    <img src="./public/images/screenshot-ordering-app" width="45%" />
+    <img src="./public/images/screenshot-ordering-app" />
 </div>
 
 ## Overview
