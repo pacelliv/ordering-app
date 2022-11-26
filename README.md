@@ -2,9 +2,9 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-|             Solarized dark              |             Solarized Ocean             |
-| :-------------------------------------: | :-------------------------------------: |
-| ![](.public/images/screenshot-feed.png) | ![](.public/images/screenshot-feed.png) |
+|              Solarized dark               |              Solarized Ocean              |
+| :---------------------------------------: | :---------------------------------------: |
+| ![](".public/images/screenshot-feed.png") | ![](".public/images/screenshot-feed.png") |
 
 ## Overview
 
