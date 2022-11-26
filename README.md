@@ -2,6 +2,11 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
+<div style="display:flex">
+    <img src="public/images/screenshot-ordering-app.png" width="45%"/>
+    <img src="public/images/screenshot-ordering-app.png" width="45%"/>
+</div>
+
 <div>
     <img src="public/images/screenshot-ordering-app.png" width="45%"/>
 </div>
