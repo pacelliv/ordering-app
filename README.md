@@ -3,8 +3,8 @@
 ## This is a solution to the ordering app solo-project from Scrimba
 
 <p align="middle" >
-  <img src="./public/images/screenshot-feed.png" width="200"/>
-  <img src="./public/images/screenshot-modal.png" width="200" /> 
+  <img src="/public/images/screenshot-feed.png" width="40%"/>
+  <img src="/public/images/screenshot-modal.png" width="40%" /> 
 </p>
 
 ## Overview
