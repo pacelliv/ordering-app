@@ -3,7 +3,7 @@
 ## This is a solution to the ordering app solo-project from Scrimba
 
 <div>
-    <img src="public/images/screenshot-ordering-app" />
+    <img src="public/images/screenshot-ordering-app.png" width="45%"/>
 </div>
 
 ## Overview
