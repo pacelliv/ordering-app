@@ -24,10 +24,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <!-- <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-        /> -->
         <title>Ordering App</title>
     </head>
     <body id="body">
@@ -40,23 +36,55 @@
             <div class="order-feed hidden" id="order-feed"></div>
             <!-- Modal -->
             <div class="modal hidden" id="modal">
-                <h3 class="modal-title">Enter your card details</h3>
-                <form class="modal-form">
+                <div class="billing-info">
+                    <p class="modal-text shade">Shop</p>
+                    <p class="modal-text weight">Jimmy's Diner</p>
+                </div>
+                <div class="billing-info">
+                    <p class="modal-text shade">Order ID</p>
+                    <p class="modal-text weight" id="order-id"></p>
+                </div>
+                <div class="billing-info">
+                    <p class="modal-text shade">Amount</p>
+                    <p class="modal-text weight" id="order-amount"></p>
+                </div>
+                <div class="billing-method">
+                    <button class="method-btn yellow" id="pay-btn">
+                        <img class="logo" src="./images/paypal-logo-png-transparent.png" />
+                    </button>
+                    <button class="method-btn black" id="pay-btn">
+                        <img
+                            class="logo google"
+                            src="./images/google-pay-logo-png-transparent.png"
+                        />
+                    </button>
+                </div>
+
+                <p class="modal-alternative-text"><span>Or pay with credit card</span></p>
+
+                <form class="modal-form" id="modal-form">
                     <input
                         type="text"
                         class="modal-input"
-                        placeholder="Enter your name"
+                        placeholder="Name on card"
                         id="name"
                         required
                     />
-                    <input
-                        type="text"
-                        class="modal-input"
-                        placeholder="Enter your card number"
-                        required
-                    />
-                    <input type="text" class="modal-input" placeholder="Enter CVV" required />
-                    <button class="order-btn" id="pay-btn">Pay</button>
+                    <div class="credit-card-numbers">
+                        <input
+                            type="text"
+                            class="modal-input number-card"
+                            placeholder="Card number"
+                            required
+                        />
+                        <input
+                            type="text"
+                            class="modal-input number-cvc"
+                            placeholder="CVC"
+                            required
+                        />
+                    </div>
+                    <button class="order-btn modifier" id="submit-btn" type="submit"></button>
                 </form>
             </div>
         </div>
