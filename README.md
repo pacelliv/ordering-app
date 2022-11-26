@@ -2,12 +2,8 @@
 
 ## This is a solution to the ordering app solo-project from Scrimba
 
-<p align="middle" >
-  <img src=".../.../screenshot-feed.png" width="45%" />
-  <img src=".../.../screenshot-modal.png" width="45%" /> 
-</p>
 <div>
-    <img src="./public/images/screenshot-ordering-app" />
+    <img src="public/images/screenshot-ordering-app" />
 </div>
 
 ## Overview
