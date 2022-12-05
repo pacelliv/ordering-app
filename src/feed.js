@@ -1,5 +1,4 @@
 import { menuArray } from "./data.js"
-import { orderedItems } from "./../index.js"
 import { v4 as uuidv4 } from "https://jspm.dev/uuid"
 
 /* getOrderHtml uses the item returned by handleAddClick or handleRemoveClick 
@@ -39,10 +38,6 @@ export function getOrderHtml(items) {
     // The four lines from above can be reduce into:
     // const uniqueItems = [...new Map(items.map((item) => [item.id, item]).values())]
 
-    if (orderedItems.length === 0) {
-        document.getElementById("order-feed").classList.add("hidden")
-    }
-
     items.forEach((item) => {
         totalPrice += item.price
     })
@@ -63,6 +58,10 @@ export function getOrderHtml(items) {
     document.getElementById("order-amount").textContent = `$${totalPrice}`
     document.getElementById("submit-btn").textContent = `Pay $${totalPrice}`
     document.getElementById("order-id").textContent = `${uuidv4().slice(0, 6)}`
+
+    if (totalPrice === 0) {
+        document.getElementById("order-feed").classList.add("hidden")
+    }
 
     if (uniqueItems.length > 0) {
         uniqueItems.forEach((item) => {

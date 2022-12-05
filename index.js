@@ -2,8 +2,11 @@ import "./index.css"
 import { menuArray } from "./src/data.js"
 import { getFeedHtml, getOrderHtml } from "./src/feed.js"
 import { v4 as uuidv4 } from "https://jspm.dev/uuid"
+import { randomImage } from "./src/banner.js"
 
-export let orderedItems = []
+setInterval(randomImage, 5000)
+
+let orderedItems = []
 
 /* This event listener handles the submit events */
 document.addEventListener("submit", (e) => {
@@ -19,6 +22,10 @@ document.addEventListener("submit", (e) => {
 document.addEventListener("click", (e) => {
     const modal = document.getElementById("modal")
     let clickInside = modal.contains(e.target)
+    document.querySelector(".order-btn").disabled = false
+    document.querySelectorAll(".add-btn").forEach((button) => {
+        button.disabled = false
+    })
 
     if (e.target.dataset.add) {
         document.getElementById("order-feed").classList.remove("hidden")
@@ -28,6 +35,10 @@ document.addEventListener("click", (e) => {
         handleAddClick(e.target.dataset.cross)
     } else if (e.target.id === "order-btn") {
         modal.classList.remove("hidden")
+        document.querySelectorAll(".add-btn").forEach((button) => {
+            button.disabled = true
+        })
+        document.querySelector(".order-btn").disabled = true
     } else if (e.target.dataset.remove) {
         handleRemoveClick(e.target.dataset.remove)
     } else if (!clickInside) {
@@ -67,7 +78,6 @@ function handleRemoveClick(id) {
 
 /* handlePayClick creates the rating element */
 function handlePayClick() {
-    // event.preventDefault()
     modal.classList.add("hidden")
     document.getElementById("order").innerHTML = `
             <div class="order-confirmed">

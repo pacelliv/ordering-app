@@ -63,15 +63,24 @@ span {
 }
 
 .header {
+    width: 100%;
+    background-color: #c1c1c1;
+    background-blend-mode: multiply;
     min-width: 250px;
     height: 167px;
+    padding: 1em;
+    color: #fdc32f;
+    text-shadow: 1px 1px 3px wheat;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header-image {
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    object-fit: cover;
+.diner-name,
+.autor {
+    margin: 0;
+    align-self: flex-end;
 }
 
 .item {
