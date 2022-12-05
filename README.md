@@ -34,7 +34,7 @@ This project was built using [Vite](https://vitejs.dev/).
 -   ~~Star rating element for the client~~
 -   ~~Remove duplicates from the DOM~~
 -   Discount for the client
--   Banner with animated slideshow
+-   ~~Banner with animated slideshow~~
 -   Different color palette
 
 ## Quick start:
