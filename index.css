@@ -67,19 +67,19 @@ span {
     background-blend-mode: multiply;
     min-width: 250px;
     height: 167px;
-    padding: 1em;
+    padding: 1em 1.5em;
     color: #fdc32f;
     text-shadow: 1px 1px 3px wheat;
-    font-size: 1.3em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.diner-name,
-.autor {
+.diner-name {
     margin: 0;
     align-self: flex-end;
+    letter-spacing: 1px;
+    font-size: 3rem;
 }
 
 .item {
